@@ -4,7 +4,7 @@ import * as actions from '../actions/character'
 const DEFAULT_STATE = {
     characters: [],
     fecthing: false,
-    page: 0,
+    nextPage: null,
     allPagesLoaded: false
 }
 
@@ -14,17 +14,15 @@ export default createReducer({
         fecthing: true
     }),
     [actions.nextPageReceived]: (state, payload) => {
-        const currentPage = state.page + 1;
-        const nextPage = currentPage + 1;
         return {
             ...state,
             characters: [...state.characters, ...payload.results],
-            page: currentPage,
+            nextPage: payload.nextPage,
             fecthing: false,
-            allPagesLoaded: nextPage > payload.info.pages
+            allPagesLoaded: payload.allPagesLoaded 
         }
     },
     [actions.movingOutOfCharacterListPage]: (state, payload) => ({
         ...DEFAULT_STATE
-    })    
+    })
 }, DEFAULT_STATE);

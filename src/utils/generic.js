@@ -9,7 +9,7 @@ export const connectTo = (mapStateToProps, actions, Component) => {
     )(Component)
 }
 
-export function extractIdFromApiUrl(urlToExtractId) {
+export function extractLastPathPartFromUri(urlToExtractId) {
     const splitPaths = urlToExtractId.split('/');
     return splitPaths[splitPaths.length - 1];
 }
