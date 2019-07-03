@@ -1,5 +1,5 @@
-import * as characterActions from '../actions/character'
-import characterReducer from './character'
+import * as characterActions from '../../actions/character'
+import characterReducer from '../../reducers/character'
 
 describe('character reducers', () => {
     it('should start width a default state', () => {
