@@ -1,0 +1,58 @@
+.img-container .character-detail-image {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.character-detail-container {
+  width: 50%;
+  padding: 10px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.character-detail-container .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.character-detail-container .info-container .info {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 5px;
+}
+.character-detail-container .info-container .episodes {
+  font-size: 16px;
+}
+
+.character-detail-container
+  .info-container
+  .episodes
+  .episode-names
+  .episode-name {
+  margin: 5px;
+}
+ 
+.back-button {
+  width: 100px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background-color: #cecece;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.42);
+}

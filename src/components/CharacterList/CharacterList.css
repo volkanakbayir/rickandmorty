@@ -1,0 +1,13 @@
+.character-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+.infinite-scroller {
+  max-height: 100vh;
+  overflow: auto;
+}
+ 
