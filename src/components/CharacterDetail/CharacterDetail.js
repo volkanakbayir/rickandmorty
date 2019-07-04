@@ -63,13 +63,13 @@ class CharacterDetail extends Component {
                   {this.renderEpisodeNames(detail.episodes)}
                 </div>
               </div>
+              <div className="back-button-container">
+                <div className="back-button" onClick={this.handleBackButton}>
+                  <span className="back-icon">&larr;</span> Back To List
+                </div>
+              </div>
             </Paper>
         }
-        <div className="back-button-container">
-          <div className="back-button" onClick={this.handleBackButton}>
-            <span className="back-icon">&larr;</span> Go Back
-          </div>
-        </div>
       </React.Fragment>
     );
   }

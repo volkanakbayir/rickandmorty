@@ -37,11 +37,11 @@
 }
  
 .back-button {
-  width: 100px;
+  display: inline-block;
   border: 1px solid #ccc;
   padding: 10px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 5px;
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
