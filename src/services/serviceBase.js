@@ -11,7 +11,7 @@ export default class ServiceBase {
         this.baseUrl = baseUrl;
     }
 
-    get = async (path) => {
+    async get(path) {
         const result = await fetch(this.baseUrl + path);
         return result.json();
     }

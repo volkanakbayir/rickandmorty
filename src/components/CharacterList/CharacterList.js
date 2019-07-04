@@ -20,8 +20,8 @@ class CharacterList extends Component {
   handleScroll = (event) => {
     const { scrollTop, scrollHeight } = event.target;
     const clientHeight = event.target.clientHeight || window.innerHeight;
-    const scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
-    if (scrolledToBottom && !this.props.allPagesLoaded) {
+    const isScrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+    if (isScrolledToBottom && !this.props.allPagesLoaded) {
       this.props.fetchNextPage();
     }
   }

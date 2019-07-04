@@ -6,6 +6,9 @@ import * as characterSagas from './character';
 import * as characterDetailActions from '../actions/characterDetail'
 import * as characterDetailSagas from './characterDetail';
 
+/**
+ * This function is matching sagas with their corresponding actions by their name equality.
+ */
 export default function* saga() {
     const relations = [
         [characterActions, characterSagas],

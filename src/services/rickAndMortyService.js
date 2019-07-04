@@ -5,16 +5,16 @@ class RickAndMortyService extends ServiceBase {
         super(apiUrl)
     }
 
-    getPaged = (page) => {
-        return this.get(`character/?page=${page}`);
+    async getPaged(page) {
+        return await this.get(`character/?page=${page}`);
     }
 
-    getCharacter = (characterId) => {
-        return this.get(`character/${characterId}`);
+    async getCharacter(characterId) {
+        return await this.get(`character/${characterId}`);
     }
 
-    getEpisodes = (episodeIds) => {
-        return this.get(`episode/${episodeIds.join(',')}`).then(episodes => {
+    async getEpisodes(episodeIds) {
+        return await this.get(`episode/${episodeIds.join(',')}`).then(episodes => {
             if (episodes instanceof Array)
                 return episodes
             else if (episodes)

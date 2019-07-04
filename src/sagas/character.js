@@ -12,7 +12,7 @@ export function* fetchNextPage() {
     yield put(nextPageReceiving());
     const currState = store.getState().character;
     const pageToCall = currState.nextPage || 1;
-    const response = yield call(RickAndMortyService.getPaged, pageToCall);
+    const response = yield call(RickAndMortyService.getPaged.bind(RickAndMortyService), pageToCall);
     const nextPage = extractLastPathPartFromUri(response.info.next).split('page=')[1]; // some kind of hack to get next page number
     yield put(nextPageReceived({
         ...response,
