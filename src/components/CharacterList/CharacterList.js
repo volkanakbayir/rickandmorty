@@ -5,10 +5,9 @@ import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 import { fetchNextPage, movingOutOfCharacterListPage, characterListPageOpened } from '../../actions/character'
 import { connectTo } from '../../utils/generic'
 
+// eslint-disable-next-line
 class CharacterList extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   componentDidMount() {
     this.props.characterListPageOpened();
   }

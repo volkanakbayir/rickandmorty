@@ -1,9 +1,6 @@
 import ServiceBase from "./serviceBase";
 
 class RickAndMortyService extends ServiceBase {
-    constructor(apiUrl) {
-        super(apiUrl)
-    }
 
     async getPaged(page) {
         return await this.get(`character/?page=${page}`);
